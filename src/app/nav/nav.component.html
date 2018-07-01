@@ -1,0 +1,11 @@
+<!-- 흠... header라기보다는 nav기능을 수행하는 녀석으로 만들어야 겠어  -->
+
+
+<div id="nav-body">
+    <a snScrollSpyItem class="nav-item" *ngFor="let item of navItems;let i = index" [href]="'#section'+(i+1)">
+        <span class="nav-text custom--hidden">
+            {{item.name}}
+        </span>
+        <fa-icon [icon]="item.icon"></fa-icon>
+    </a>
+</div>

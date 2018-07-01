@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+html,body{
+    margin: 0 ;
+    padding: 0 ;
+    .hanna{
+        font-family:'Hanna', sans-serif;
+
+    }
+
+}
+
+
+.custom--header3{
+    font-size: 3rem
+}
+
+.custom--hidden{
+    @media only screen and (max-width: 500px) {
+        display: none;
+    }
+}
