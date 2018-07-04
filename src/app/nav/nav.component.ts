@@ -49,6 +49,13 @@ export class NavComponent implements OnInit {
 
 
     }
+
+    actingScrolspy(elementId) {
+        console.log(elementId)
+        if (document.getElementById(elementId)) {
+            window.scrollTo(0, document.getElementById(elementId).offsetTop)
+        }
+    }
 }
 
 export interface NavItem {

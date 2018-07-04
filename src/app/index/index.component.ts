@@ -23,7 +23,7 @@ export class AppIndexComponent implements OnInit {
         this.currTime = moment().format('YYYY-MM-DD HH:mm:ss')
 
         setInterval(() => {
-            this.currTime = moment().format('YYYY-MM-DD HH:mm:ss')
+            this.currTime = moment().format('YYYY년 MM월 DD일 HH시mm분ss초')
         }, 1000)
 
 
@@ -31,6 +31,13 @@ export class AppIndexComponent implements OnInit {
 
 
     ngOnInit() {
+        this.currTime
+
+        setTimeout(() => {
+            console.log('what the f!')
+        }, 1000);
+
+
 
     }
 }

@@ -2,10 +2,10 @@
 
 
 <div id="nav-body">
-    <a snScrollSpyItem class="nav-item" *ngFor="let item of navItems;let i = index" [href]="'#section'+(i+1)">
+    <div (click)="actingScrolspy('section'+i)" class="nav-item" *ngFor="let item of navItems;let i = index">
         <span class="nav-text custom--hidden">
             {{item.name}}
         </span>
         <fa-icon [icon]="item.icon"></fa-icon>
-    </a>
+    </div>
 </div>
