@@ -6,7 +6,7 @@
 
 section{
     width: 100%;
-    height: 91vh;
+    // height: 91vh;
 
 
 
@@ -17,6 +17,7 @@ section{
 
     }
     .section-body{
+        padding: 15px;
         .row{
             width: 100%;
             display: inline-flex;
@@ -32,6 +33,7 @@ section{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 91vh;
     .section-header{
         color: turquoise;
         // display: inline-flex;
@@ -60,11 +62,54 @@ section{
 }
 
 #section1{
+
+    @media only screen and (min-width: 500px)  {
+        height: 91vh;
+    }
+    .about-article{
+        line-height: 2
+    }
+
     .row{
         width: 100%;
-        display: inline-flex;
+        @media only screen and (max-width: 500px)  {
+            display: flex;
+            flex-direction: column
+        }
+        @media only screen and (min-width: 500px)  {
+            display: inline-flex;
+        }
+        .long-col{
+            flex: 2;
+        }
         .col{
+
             flex: 1;
+            height: 50vh;
+
+            padding: 20px;
+            .profile {
+                height: 40vh;
+                background-image: url('../../assets/youngtae_profile.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         }
     }
+}
+
+#section2{
+
+
+    .skill-list{
+        display: inline-flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        img{
+            max-width: 150px;
+        }
+    }
+
 }
