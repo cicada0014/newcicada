@@ -2,6 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faCaretSquareDown } from '@fortawesome/free-regular-svg-icons'
 import * as moment from 'moment'
 
 @Component({
@@ -15,6 +16,7 @@ export class AppIndexComponent implements OnInit {
     public currTime: string;
     public facebookIcon = faFacebook;
     public faGithubIcon = faGithub;
+    public caretIcon = faCaretSquareDown;
 
 
     constructor() {
@@ -29,13 +31,27 @@ export class AppIndexComponent implements OnInit {
 
     }
 
+    goLink(type: string) {
+        let url: string = ''
+        switch (type) {
+            case 'facebook':
+                url = 'https://www.facebook.com/cicada0014'
+                break;
+            case 'github':
+                url = 'https://github.com/cicada0014'
+                break;
+            case 'steem':
+                url = 'https://steemit.com/@cicada0014'
+                break;
+        }
+        window.open(url, '_blank')
 
+    }
     ngOnInit() {
-        this.currTime
+        // this.currTime
 
-        setTimeout(() => {
-            console.log('what the f!')
-        }, 1000);
+        // setTimeout(() => {
+        // }, 1000);
 
 
 

@@ -6,9 +6,9 @@
         </div>
 
     </div>
-    <div id="section-clock">
+    <!-- <div id="section-clock">
         {{currTime}}
-    </div>
+    </div> -->
 
     <div class="section-body">
 
@@ -17,36 +17,45 @@
             <span class="hanna">
                 웹 개발자 김영태입니다
             </span>
-        </div>
 
-        <!-- <div>
-            편하게 연락하세요! 가치가 있는 일을 함께 하며 성장을 하고자 합니다. 언제든지 연락주세요. 단순한 이야기여도 좋습니다! ^^
-        </div> -->
-        <div>
 
         </div>
-        <!-- <div class="link-list">
-            <ul>
-                <li class="link-list-item">
-                    <span>페이스북</span>
+
+        <div class="link-list">
+            <div class="link-list-row">
+                <div class="link-list-item" (click)="goLink('facebook')">
+                    <span>
+                        페이스북
+                    </span>
                     <fa-icon [icon]="facebookIcon"></fa-icon>
-                </li>
-                <li class="link-list-item">
-                    <span>깃헙</span>
+                </div>
+            </div>
+            <div class="link-list-row">
+                <div class="link-list-item" (click)="goLink('github')">
+                    <span>
+                        깃 헙
+                    </span>
                     <fa-icon [icon]="faGithubIcon"></fa-icon>
-                </li>
-                <li class="link-list-item">
-                    스팀잇
-                    <small>
-                        블로그
-                    </small>
-                </li>
-                <li class="link-list-item">
-                    cicada0014@gmail.com
-                </li>
-            </ul>
+                </div>
 
-        </div> -->
+            </div>
+            <div class="link-list-row">
+                <div class="link-list-item" (click)="goLink('steem')">
+                    <span>
+                        스팀잇
+                    </span>
+                    <!-- <small>
+                            블로그
+                        </small> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="caret-wrapper">
+            <div class="caret infinite animated caret-bounce">
+                <fa-icon [icon]="caretIcon" aria-hidden="true"></fa-icon>
+            </div>
+        </div>
 
 
 
@@ -132,10 +141,17 @@
 <section id="section3">
     <div class="section-header">
         <div class="hanna custom--header3">
-            Portfolio
+            Experience
         </div>
     </div>
     <div class="section-body">
+        <div>
+            어떤 것을 경험했고, 소켓 이랑 레디스 연결등 소소한 것 까지 기술합시다.
+        </div>
+        <div>
+            그래서 어떤 것을 할줄 아는지에 대해서 기술 주로 js에 집중을해서 설명하자.
+        </div>
+
     </div>
 </section>
 <section id="section4">
@@ -146,6 +162,30 @@
 
     </div>
     <div class="section-body">
+        <h5>
+            history
+        </h5>
+        <div>
+            <div>
+                2017.5 ~ (주)운칠기삼 개발자
+            </div>
+            <div>
+                2016.8 ~ 2017.2 자바 국비지원 웹 개발자 교육
+            </div>
+            <div>
+                2014.3 ~ 2016.6 ROTC 52기 육군 중위 (병과 : 정보통신)
+            </div>
+            <div>
+                2010.3 ~ 2014.2 고려대학교 환경생태공학사
+            </div>
+            <div>
+                ~ 2009.2 청주 운호고등학교
+            </div>
+        </div>
+
+        <div>
+            어떻게 살고 싶은지
+        </div>
         어떻게 살아가고 싶은가 인간은 누구나 행복하고 싶어합니다. 저 역시 행복하게 살고 싶습니다. 행복에 대한 답을 찾아가는 중이에요. 항상 행복할수만도 없음을 잘 알고 있습니다. 그렇지만 믿습니다. 긍정적으로 하고싶은 것을
         하면서 살아가고자 합니다. 어제의 나보다 더 나은 내가 되고자 하며, 주위 사람들과 함께 긍정적인 영향을 주고 받는다면 행복하게 살았다고 이야기 할 수 있을 것 같습니다.
 
