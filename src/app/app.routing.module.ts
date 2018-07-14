@@ -11,8 +11,12 @@ const routes: Routes = [
     {
         path: 'index',
         component: AppIndexComponent
-        
     },
+    {
+        path: 'game',
+        loadChildren: '.\/game\/game.module#GameModule',
+    }
+
 ];
 
 @NgModule({

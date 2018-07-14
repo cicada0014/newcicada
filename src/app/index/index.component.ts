@@ -1,8 +1,8 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faCaretSquareDown } from '@fortawesome/free-regular-svg-icons'
+import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import * as moment from 'moment'
 
 @Component({
@@ -31,6 +31,9 @@ export class AppIndexComponent implements OnInit {
 
     }
 
+    // down(){
+    //         window.scrollTo(0, document.getElementById(elementId).offsetTop)
+    // }
     goLink(type: string) {
         let url: string = ''
         switch (type) {

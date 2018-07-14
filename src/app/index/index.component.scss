@@ -3,11 +3,17 @@
 
 .caret-wrapper{
     position: absolute;
-    bottom: 9vh;
+    left: 0;
+    bottom: 0vh;
+    background: black;
+    height: 10%;
     width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .caret {
-    margin-top: 30px;
+    margin-top: 40px;
     margin: 0 0 2px;
     font-size: 40px;
     text-align: center;
@@ -64,9 +70,10 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 91vh;
+            height: 100vh;
             .section-header{
-                color: turquoise;
+                background: black;
+                color: white;
                 // display: inline-flex;
                 // width: 100%;
                 justify-content: space-between;
@@ -79,7 +86,7 @@
                 justify-content: flex-end;
                 span{
                     font-size: 35px;
-                    color:turquoise;
+                    color:white;
                     background: #333
                 }
             }
@@ -89,7 +96,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                color: aquamarine;
+                color: white;
                 margin-top: 25px;
                 // background: #333;
                 // width: 250px;
@@ -142,7 +149,6 @@
                     flex: 2;
                 }
                 .col{
-
                     flex: 1;
                     height: 50vh;
 
