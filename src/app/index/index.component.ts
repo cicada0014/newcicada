@@ -1,7 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { faCaretSquareDown } from '@fortawesome/free-regular-svg-icons'
+import { faCaretSquareDown, faCaretSquareUp } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import * as moment from 'moment'
 
@@ -19,6 +19,8 @@ export class AppIndexComponent implements OnInit {
     public caretIcon = faCaretSquareDown;
 
 
+    private toScrollTarget: string = 'section1'
+
     constructor() {
 
 
@@ -31,9 +33,11 @@ export class AppIndexComponent implements OnInit {
 
     }
 
-    // down(){
-    //         window.scrollTo(0, document.getElementById(elementId).offsetTop)
-    // }
+    upAndDown() {
+        window.scrollTo(0, document.getElementById(this.toScrollTarget).offsetTop);
+        this.toScrollTarget = this.toScrollTarget == 'section1' ? 'section0' : 'section1'
+        this.caretIcon = this.toScrollTarget == 'section1' ? faCaretSquareDown : faCaretSquareUp;
+    }
     goLink(type: string) {
         let url: string = ''
         switch (type) {

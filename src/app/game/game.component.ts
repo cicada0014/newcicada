@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-// import { MenuScene } from './scene/menu/menu.scene';
+import { MenuScene } from './scene/menu/menu.scene';
 import * as Phaser from 'phaser';
-// import { StageScene } from './scene/stage/stage.scene';
+import { StageScene } from './scene/stage/stage.scene';
 
 
 @Component({
@@ -18,18 +18,22 @@ export class GameComponent {
 
     phaserGame: Phaser.Game
 
+
+    memoVw: number;
+
+    private menuScene: MenuScene = new MenuScene()
+    private stageScene: StageScene = new StageScene()
+
     constructor(
-        // private menuScene: MenuScene,
-        // private stageScene: StageScene,
+
     ) {
-
-
-
-
+    }
+    ngOnInit(): void {
+        this.memoVw = window.innerWidth;
         this.gameConfig = {
             type: Phaser.CANVAS,
-            width: 800,
-            height: 600,
+            width: window.innerWidth,
+            height: window.innerHeight,
             physics: {
                 default: 'arcade',
                 arcade: {
@@ -42,17 +46,34 @@ export class GameComponent {
 
             parent: 'app-game',
             scene: [
-                // menuScene,
-                // stageScene
+                this.menuScene,
+                this.stageScene
             ]
         }
 
 
-        this.phaserGame = new Phaser.Game(this.gameConfig)
 
+        this.phaserGame = new Phaser.Game(this.gameConfig)
 
     }
 
 
 
+    ngAfterViewChecked() {
+        //Called after every check of the component's view. Applies to components only.
+        //Add 'implements AfterViewChecked' to the class.
+        // if (window.innerWidth !== this.memoVw) {
+        //     setTimeout(() => {
+        //         this.phaserGame.resize(window.innerWidth, window.innerHeight)
+        //     }, 2000);
+        // }
+    }
+
+    ngOnDestroy(): void {
+        this.phaserGame.destroy(false);
+        let gameCanvas = document.getElementsByTagName('canvas')
+        if (gameCanvas.length > 0) {
+            gameCanvas.item(0).remove()
+        }
+    }
 }
