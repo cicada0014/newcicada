@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { faCaretSquareDown, faCaretSquareUp } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import * as moment from 'moment'
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
     selector: 'app-index',
@@ -21,7 +22,9 @@ export class AppIndexComponent implements OnInit {
 
     private toScrollTarget: string = 'section1'
 
-    constructor() {
+    constructor(
+        private router: Router
+    ) {
 
 
         this.currTime = moment().format('YYYY-MM-DD HH:mm:ss')
@@ -34,9 +37,10 @@ export class AppIndexComponent implements OnInit {
     }
 
     upAndDown() {
-        window.scrollTo(0, document.getElementById(this.toScrollTarget).offsetTop);
-        this.toScrollTarget = this.toScrollTarget == 'section1' ? 'section0' : 'section1'
-        this.caretIcon = this.toScrollTarget == 'section1' ? faCaretSquareDown : faCaretSquareUp;
+        this.router.navigate(['game'])
+        // window.scrollTo(0, document.getElementById(this.toScrollTarget).offsetTop);
+        // this.toScrollTarget = this.toScrollTarget == 'section1' ? 'section0' : 'section1'
+        // this.caretIcon = this.toScrollTarget == 'section1' ? faCaretSquareDown : faCaretSquareUp;
     }
     goLink(type: string) {
         let url: string = ''

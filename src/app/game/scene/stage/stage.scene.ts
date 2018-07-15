@@ -69,8 +69,8 @@ export class StageScene extends Phaser.Scene {
 
         this.add.image(400, 300, 'sky').setScale(10, 1.5);
 
-        this.scoreText =
-            this.add.text(100, 100, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+        this.scoreText = this.add.text(100, 100, 'score: 0', { fontSize: '32px', fill: '#000' });
 
 
 
@@ -226,7 +226,7 @@ export class StageScene extends Phaser.Scene {
 
         // this.cameras.main.followOffset.x = 100
 
-        this.cameras.main.startFollow(this.player, true, 1000, 0, 0, 65)
+        this.cameras.main.startFollow(this.player, true, 1, 1, 0, 65)
 
 
 

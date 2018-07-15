@@ -29,11 +29,18 @@ export class GameComponent {
     ) {
     }
     ngOnInit(): void {
+        // window.set
+        // if(window.orientation){
+        //     window.orientation = -90
+        // }
+
+
         this.memoVw = window.innerWidth;
         this.gameConfig = {
             type: Phaser.CANVAS,
-            width: window.innerWidth,
-            height: window.innerHeight,
+            width: 2000,
+            height: 1200,
+            zoom: 0.6,
             physics: {
                 default: 'arcade',
                 arcade: {
@@ -44,7 +51,7 @@ export class GameComponent {
 
             },
 
-            parent: 'app-game',
+            parent: 'game-canvas',
             scene: [
                 this.menuScene,
                 this.stageScene
@@ -57,16 +64,18 @@ export class GameComponent {
 
     }
 
+    ngAfterViewInit() {
+        // let gameCanvas = document.getElementsByTagName('canvas')
+        // if (gameCanvas.length > 0) {
+        //     gameCanvas.item(0).width = innerHeight;
+        //     gameCanvas.item(0).height = innerWidth;
+        // }
 
+    }
 
     ngAfterViewChecked() {
         //Called after every check of the component's view. Applies to components only.
         //Add 'implements AfterViewChecked' to the class.
-        // if (window.innerWidth !== this.memoVw) {
-        //     setTimeout(() => {
-        //         this.phaserGame.resize(window.innerWidth, window.innerHeight)
-        //     }, 2000);
-        // }
     }
 
     ngOnDestroy(): void {

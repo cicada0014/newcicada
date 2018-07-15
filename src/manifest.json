@@ -1,0 +1,7 @@
+{
+    "name": "Progressive Web Cat",
+    "short_name": "PWCat",
+    "description": "A funny cat image generator",
+    "display": "standalone",
+    "orientation": "landscape"
+}
